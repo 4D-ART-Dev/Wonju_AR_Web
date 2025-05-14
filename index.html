@@ -112,6 +112,18 @@
     <script src="arcamera.js" type="text/javascript"></script>
     <script src="wtracker.js" type="text/javascript"></script>
     <script>
+	  var img = document.getElementById('screenshotImg');
+      var src = img.src;
+
+        // 이미지 링크 생성
+      var link = document.createElement('a');
+      link.href = src;
+      link.download = 'screenshot.png';
+
+        // 링크를 문서에 추가하고 클릭한 후 제거
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
 	  document.getElementById('saveButton').addEventListener('click', function() {
         var img = document.getElementById('screenshotImg');
         var src = img.src;
@@ -219,7 +231,7 @@
           streamingAssetsUrl: "StreamingAssets",
           companyName: "FourDArt",
           productName: "Wonju_AR",
-          productVersion: "0.1.20",
+          productVersion: "0.1.21",
           showBanner: unityShowBanner,
         };
 
