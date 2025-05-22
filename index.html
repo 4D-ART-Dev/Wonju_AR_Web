@@ -127,7 +127,7 @@
         document.body.removeChild(link);
       }
 	
-	    document.getElementById('saveButton').addEventListener('click', TakeScreenshot() );
+	    document.getElementById('saveButton').addEventListener('click', TakeScreenshot );
       // Disable double-tap to zoom
       document.addEventListener('touchstart', function (event) {
         if (event.touches.length > 1) {
@@ -221,7 +221,7 @@
           streamingAssetsUrl: "StreamingAssets",
           companyName: "FourDArt",
           productName: "Wonju_AR",
-          productVersion: "0.1.23",
+          productVersion: "0.1.24",
           showBanner: unityShowBanner,
         };
 
@@ -532,6 +532,7 @@
           document.getElementById("screenshotImg").src = dataUrl;
           document.getElementById("screenshotImg").style.width = "80vw";
           document.getElementById("screenshotImg").style.height = 80 / window.innerWidth * window.innerHeight + "vw";
+          TakeScreenshot();
       }
 
       function HideScreenshot(){
