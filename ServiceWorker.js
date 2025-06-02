@@ -1,4 +1,4 @@
-const cacheName = "FourDArt-Wonju_AR-0.1.33";
+const cacheName = "FourDArt-Wonju_AR-0.1.34";
 const contentToCache = [
     "Build/Wonju_AR_Web.loader.js",
     "Build/Wonju_AR_Web.framework.js.unityweb",
